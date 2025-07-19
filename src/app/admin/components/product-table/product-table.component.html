@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nro</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Precio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index; let isEven = even" [ngClass]="{ 'table-success': isEven }">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}$</td>
+      <td><button class="btn btn-danger" (click)="deleteProduct(product.id)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>

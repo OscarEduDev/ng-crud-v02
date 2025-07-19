@@ -1,0 +1,5 @@
+<h1>Productos</h1>
+<hr />
+<admin-product-form (onAddProduct)="addProduct($event)"></admin-product-form>
+<admin-product-table [products]="products"  (onDeleteProduct)="deleteProduct($event)"></admin-product-table>
+

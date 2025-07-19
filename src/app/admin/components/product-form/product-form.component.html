@@ -1,0 +1,9 @@
+<form (ngSubmit)="submitForm()">
+  <label for="name">Nombre:</label>
+  <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name">
+  <label for="description">Descripción:</label>
+  <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description">
+  <label for="price">Precio:</label>
+  <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+  <button class="btn btn-primary" type="submit">Guardar</button>
+</form>
